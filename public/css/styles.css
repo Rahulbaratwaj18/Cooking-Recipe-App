@@ -1,0 +1,44 @@
+.root{
+    --bs-font-sans-serif:"Rubik",sans-serif;
+}
+.container-xxl{
+ max-width: 1530px;
+}
+
+a{
+    color: var(--bs-dark);
+}
+
+
+/* Category Styles */
+.category-link{
+    text-align:center;
+    display:block;
+    text-decoration: none;
+    transition: all 0.5s ease-in;
+    
+}
+.category-link:hover{
+    transform: scale(1.2);
+}
+.category-img{
+ display:flex;
+ align-items: center;
+ width:100%;
+ justify-content:center;
+ height: 100px;
+ margin-bottom:10px;
+ box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+ border-radius: 8px;
+ overflow:hidden;
+
+}
+
+.category-img img{
+   object-fit:cover;
+   width:100%;
+}
+.category-img-recipe{
+    height: 300px;
+   
+}

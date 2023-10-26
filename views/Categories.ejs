@@ -1,0 +1,48 @@
+<h1 class="pb-4">Explore the Cusine </h1>
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Explore Categories </li>
+  </ol>
+</nav>
+
+
+
+
+<div class="row row-cols-2 row-cols-lg-5 mb-4 g-3 ">
+<% if(typeof categories !== "undefined" && categories.length > 0){ %>
+      
+    <% categories.forEach((category,index) =>{ %>
+    <a href="/categories/<%- category.name %> " class="col text-center category-link">
+        <div class="category-img shadow">
+          <img src="/img/<%-category.img %>" loading="lazy" alt="<%- category.name %>" />
+        </div>
+        <div class="pt-4">
+          <p><%- category.name %></p>
+        </div>
+      </a>
+     <% }) %>
+    
+   <% } %> 
+
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 mt-5">
+  <% if (typeof categoryById !== "undefined" && categoryById.length > 0) { %> 
+  <% categoryById.forEach(function(recipe) { %>
+  <a href="/recipe/<%= recipe._id %>" class="col text-center category-link">
+    <div class="category-img category-img-recipe">
+      <img
+        src="/uploads/<%= recipe.image %>"
+        loading="lazy"
+        alt="<%= recipe.name %>"
+      />
+    </div>
+    <div class="pt-4">
+      <p><%= recipe.name %></p>
+    </div>
+  </a>
+  <% }) %> <% } %>
+</div>

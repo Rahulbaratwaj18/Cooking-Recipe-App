@@ -1,0 +1,22 @@
+<h1 class="pb-4">Latest Recipes </h1>
+
+
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 mt-5">
+    <% if (recipe != " ") { %> <% recipe.forEach(function(recipe) { %>
+
+        
+    <a href="/recipe/<%= recipe._id %>" class="col text-center category-link">
+      <div class="category-img category-img-recipe">
+        <img
+          src="/uploads/<%= recipe.image %>"
+          loading="lazy"
+          alt="<%= recipe.name %>"
+        />
+      </div>
+      <div class="pt-4">
+        <p><%= recipe.name %></p>
+      </div>
+    </a>
+    <% }) %> <% } %>
+  </div>
